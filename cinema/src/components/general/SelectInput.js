@@ -20,7 +20,7 @@ export default function SelectInput(props) {
   )
 }
 
-Input.propTypes = {
+SelectInput.propTypes = {
   label: PropTypes.string,
   options: PropTypes.array,
   Multiple: PropTypes.bool,
@@ -29,7 +29,7 @@ Input.propTypes = {
   setValue: PropTypes.func,
 };
 
-Input.defaultProps = {
+SelectInput.defaultProps = {
   label: '',
   options: [],
   Multiple: false,
