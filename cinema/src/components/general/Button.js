@@ -9,9 +9,9 @@ export default function Button(props) {
 }
 
 Button.propTypes = {
-  text: PropTypes.string,
-  className: PropTypes.string,
-  onClick: PropTypes.func,
+  text: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
   icon: PropTypes.element,
 };
 
