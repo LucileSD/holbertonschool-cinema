@@ -1,15 +1,19 @@
 import './general.css';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
 
 export default function Input(props) {
-  const { label, type, className, value, setValue, icon, inputAttributes} = props;
+  const { label, type, className, icon, inputAttributes} = props;
+  const [value, setValue] = useState();
+
   const handleInput = (event) => {
     setValue(event.target.value);
   };
 
   return (
     <>
-      { icon && <i icon={icon}/>}
+      { icon && <FontAwesomeIcon icon={icon}/>}
       <label htmlFor={`input-{className}`}>{label}</label>
       <input type={type} className={className} value={value} onChange={(e)=> handleInput(e)} {...inputAttributes} id={`input-${className}`}></input>
     </>
@@ -18,11 +22,11 @@ export default function Input(props) {
 
 
 Input.propTypes = {
-  label: PropTypes.string,
-  type: PropTypes.string,
-  className: PropTypes.string,
-  value: PropTypes.any,
-  setValue: PropTypes.func,
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  value: PropTypes.any.isRequired,
+  setValue: PropTypes.func.isRequired,
   icon: PropTypes.element,
   inputAttributes: PropTypes.object,
 };
