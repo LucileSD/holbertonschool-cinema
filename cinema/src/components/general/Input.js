@@ -9,8 +9,8 @@ export default function Input(props) {
 
   return (
     <>
-      { icon && <FontAwesomeIcon icon={icon}/>}
-      <label htmlfor={`input-{className}`}>{label}</label>
+      { icon && <i icon={icon}/>}
+      <label htmlFor={`input-{className}`}>{label}</label>
       <input type={type} className={className} value={value} onChange={(e)=> handleInput(e)} {...inputAttributes} id={`input-{className}`}></input>
     </>
   )
@@ -31,7 +31,7 @@ Input.defaultProps = {
   label: '',
   type: '',
   className: '',
-  value: null,
+  value: undefined,
   setValue: () => {},
   icon: null,
   inputAttributes: {},
