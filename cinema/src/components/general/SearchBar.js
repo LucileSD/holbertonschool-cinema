@@ -7,7 +7,7 @@ export default function SearchBar(props) {
     setTiltle(event);
   }
   return (
-    <input type='search' title={title} onChange={(e) => handleInput(e)}></input>
+    <input type='search' placeholder={title} onChange={(e) => handleInput(e)}></input>
   )
 }
 
