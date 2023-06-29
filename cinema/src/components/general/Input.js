@@ -11,7 +11,7 @@ export default function Input(props) {
     <>
       { icon && <i icon={icon}/>}
       <label htmlFor={`input-{className}`}>{label}</label>
-      <input type={type} className={className} value={value} onChange={(e)=> handleInput(e)} {...inputAttributes} id={`input-{className}`}></input>
+      <input type={type} className={className} value={value} onChange={(e)=> handleInput(e)} {...inputAttributes} id={`input-${className}`}></input>
     </>
   )
 };
