@@ -10,12 +10,18 @@ function App() {
 
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
-    axios.post('http://localhost:8000/api/auth/', {}, {headers: { 'authorization': `Bearer ${accessToken}`}})
+    console.log(accessToken);
+    axios.post('http://localhost:8000/api/auth', null, {headers: { 'Authorization': `Bearer ${accessToken}`}})
       .then((response) => {
         setIsLoggedIn(true);
         setUserUsername(response.data.username);
       })
-      .catch((error) => console.log(error))
+      .catch((error) => {
+        console.log(error);
+        setIsLoggedIn(false);
+        setUserUsername('');
+      }
+      )
   }, [])
   return (
     <>
