@@ -8,10 +8,10 @@ export default function Login(props) {
   const { username, password, setUsername, setPassword } = props;
   return(
     <>
-    <div>
+    <div id='login'>
       <p>Sign in with your account</p>
       <Input label={'Username:'} type={'text'} className={'loginuser'} value={username} setValue={setUsername} icon={faUserAstronaut}></Input>
-      <Input label={'Password:'} type={'text'} className={'pwduser'} value={password} setValue={setPassword} icon={faKey}></Input>
+      <Input label={'Password:'} type={'password'} className={'pwduser'} value={password} setValue={setPassword} icon={faKey}></Input>
       <Button text={"Sign In"} type={"submit"} className={"buttonlogin"} icon={faKey}></Button>
     </div>
     </>

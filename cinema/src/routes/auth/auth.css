@@ -1,0 +1,45 @@
+#authentication {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: #FFFFFF;
+}
+
+#login, #register {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonlogin, .buttonregister {
+  width: 10em;
+  margin-top: 2em;
+  margin-right: 2em;
+  align-self: flex-end;
+}
+
+#button-container {
+  display: flex;
+  width: 100%;
+}
+
+#button-container button {
+  width: 100%;
+  border: 0;
+}
+
+#login p, #register p {
+  font-weight: bold;
+}
+
+#register p, #login p {
+  margin: 2em;
+}
+
+.icon {
+  color: #000000;
+  opacity: 40%;
+}
+
+.activesignin {
+  background-color: #E31C25;
+}

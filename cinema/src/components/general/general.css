@@ -1,6 +1,12 @@
 button {
   background-color: #BB000E;
   color: #FFFFFF;
+  border: 0;
+  height: 3em;
+}
+
+button:focus {
+  background-color: #E31C25;
 }
 
 input {
@@ -9,8 +15,30 @@ input {
   border-right: 0;
   border-bottom: solid 1px #BB000E;
 }
+input:focus {
+  outline: none;
+}
 
 input[type ='search'] {
   border: 0;
 }
+
+input[type = 'text'], input[type = 'password'] {
+  width: 80%;
+}
+
+#icon-label {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin-left: 2em;
+}
+#icon-label label {
+  padding-left: 0.5em;
+}
+
+#global-input {
+  margin-bottom: 1em;
+}
+
 

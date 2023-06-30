@@ -13,12 +13,17 @@ export default function Authentication(props) {
 
   return (
     <>
-    <form>
-      <Button text={'Sign In'} type={'button'} className={'signInButton'} onClick={()=>set_switch(true)}></Button>
-      <Button text={'Sign Up'} type={'button'} className={'signUpButton'} onClick={()=>set_switch(false)}></Button>
-      { _switch && <Login username={username} password={password} setUsername={setUsername} setPassword={setPassword}></Login>}
-      { !_switch && <Register username={username} password={password} setUsername={setUsername} setPassword={setPassword}></Register>}
-    </form>
+    <div id='authentication'>
+      <form>
+        <div id='button-container'>
+          <Button text={'Sign In'} type={'button'} className={_switch ?  'activesignin' : 'signInButton'} onClick={()=>set_switch(true)}></Button>
+        
+          <Button text={'Sign Up'} type={'button'} className={'signUpButton'} onClick={()=>set_switch(false)}></Button>
+        </div>
+        { _switch && <Login username={username} password={password} setUsername={setUsername} setPassword={setPassword}></Login>}
+        { !_switch && <Register username={username} password={password} setUsername={setUsername} setPassword={setPassword}></Register>}
+      </form>
+    </div>
     </>
   )
 

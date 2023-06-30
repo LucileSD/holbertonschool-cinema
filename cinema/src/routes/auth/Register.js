@@ -9,11 +9,11 @@ export default function Register(props) {
 
   return (
     <>
-    <div>
+    <div id='register'>
       <p>Create a new account</p>
       <Input label={'Username:'} type={'text'} className={'loginuser'} value={username} setValue={setUsername} icon={faUserAstronaut}></Input>
-      <Input label={'Password:'} type={'text'} className={'pwduser'} value={password} setValue={setPassword} icon={faKey}></Input>
-      <Button text={"Sign In"} type={"submit"} className={"buttonlogin"} onClick={() => console.log(`hello ${username}`)} icon={faPlus}></Button>
+      <Input label={'Password:'} type={'password'} className={'pwduser'} value={password} setValue={setPassword} icon={faKey}></Input>
+      <Button text={"Sign Up"} type={"submit"} className={"buttonregister"} icon={faPlus}></Button>
     </div>
     </>
   )
