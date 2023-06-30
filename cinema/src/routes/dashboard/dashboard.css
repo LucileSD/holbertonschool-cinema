@@ -1,0 +1,29 @@
+nav img {
+  border: solid 3px #BB000E;
+  border-radius: 50%;
+  width: 41px;
+  height: 41px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+nav p, #title {
+  color: #FFFFFF;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+nav span {
+  color: #BB000E;
+  margin-top: 1em;
+  padding-right: 1em;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #161616;
+}
