@@ -17,9 +17,9 @@ export default function Header(props) {
       <div className='Header'>
         <p id='title'>Cinema Guru</p>
         <nav>
-          <img src="https://picsum.photos/100/100"></img>
+          <img alt='profile 'src="https://picsum.photos/100/100"></img>
           <p>Welcome, {userUsername}!</p>
-          <span onClick={() => logout}>Logout <FontAwesomeIcon icon={faArrowRightFromBracket}/></span>
+          <span onClick={logout}>Logout <FontAwesomeIcon icon={faArrowRightFromBracket}/></span>
         </nav>
       </div>
     </>

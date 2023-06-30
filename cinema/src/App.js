@@ -11,7 +11,6 @@ function App() {
 
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
-    console.log(accessToken);
     axios.post('http://localhost:8000/api/auth', null, {headers: { 'Authorization': `Bearer ${accessToken}`}})
       .then((response) => {
         setIsLoggedIn(true);

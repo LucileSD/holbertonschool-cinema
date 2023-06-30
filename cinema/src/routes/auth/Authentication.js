@@ -17,22 +17,32 @@ export default function Authentication(props) {
     if(_switch) {
       axios.post('http://localhost:8000/api/auth/login', {username, password})
         .then((res) => {
-          localStorage.setItem(res.data.accessToken)
+          localStorage.setItem("accessToken", res.data.accessToken)
           setUserUsername(username)
           setIsLoggedIn(true)})
+        .catch((error) => {
+          console.log(error);
+          setUserUsername('')
+          setIsLoggedIn(false)
+        })
     } else {
       axios.post('http://localhost:8000/api/auth/register', {username, password})
         .then((res) => {
-          localStorage.setItem(res.data.accessToken)
+          localStorage.setItem("accessToken", res.data.accessToken)
           setUserUsername(username)
           setIsLoggedIn(true)})
+          .catch((error) => {
+            console.log(error);
+            setUserUsername('')
+            setIsLoggedIn(false)
+          })
     }
   };
 
   return (
     <>
     <div id='authentication'>
-      <form onSubmit={() => handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div id='button-container'>
           <Button text={'Sign In'} type={'button'} className={_switch ?  'activesignin' : 'signInButton'} onClick={()=>set_switch(true)}></Button>
         
