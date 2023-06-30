@@ -4,10 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 
 export default function Input(props) {
-  const { label, type, className, icon, inputAttributes} = props;
-  const [value, setValue] = useState();
+  const { label, type, className, icon, inputAttributes, value, setValue} = props;
+  const [inputValue, setInputValue] = useState(value);
 
   const handleInput = (event) => {
+    setInputValue(event.target.value);
     setValue(event.target.value);
   };
 
@@ -15,7 +16,7 @@ export default function Input(props) {
     <>
       { icon && <FontAwesomeIcon icon={icon}/>}
       <label htmlFor={`input-{className}`}>{label}</label>
-      <input type={type} className={className} value={value} onChange={(e)=> handleInput(e)} {...inputAttributes} id={`input-${className}`}></input>
+      <input type={type} className={className} onChange={(e)=> handleInput(e)} value={inputValue} {...inputAttributes} id={`input-${className}`}></input>
     </>
   )
 };

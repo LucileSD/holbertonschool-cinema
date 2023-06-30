@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Login from './routes/auth/Login';
+import Authentication from './routes/auth/Authentication';
 
 function App() {
 
@@ -19,9 +19,11 @@ function App() {
   }, [])
   return (
     <>
-    <div className="App">
-      <Login></Login>
-    </div>
+      <div className="App">
+        {isLoggedIn && <p>Dashboard</p>}
+        {!isLoggedIn &&
+        <Authentication setIsLoggedIn={setIsLoggedIn} setUserUsername={setUserUsername}/>}
+      </div>
     </>
   );
 }
