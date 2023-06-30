@@ -1,5 +1,11 @@
 #authentication {
   display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+form {
   flex-direction: column;
   width: 30%;
   background-color: #FFFFFF;
@@ -15,6 +21,7 @@
   margin-top: 2em;
   margin-right: 2em;
   align-self: flex-end;
+  margin-bottom: 2em;
 }
 
 #button-container {
