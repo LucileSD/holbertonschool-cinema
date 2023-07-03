@@ -1,6 +1,7 @@
 import './dashboard.css';
 import PropTypes from 'prop-types';
 import Header from '../navigation/Header';
+import SideBar from '../../components/navigation/SideBar';
 
 export default function Dashboard(props) {
   const { userUsername, setIsLoggedIn} = props;
@@ -8,6 +9,7 @@ export default function Dashboard(props) {
     <>
       <div>
         <Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn}></Header>
+        <SideBar></SideBar>
       </div>
     </>
   )

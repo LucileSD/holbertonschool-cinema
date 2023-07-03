@@ -1,0 +1,63 @@
+.nav-side, .hide-nav-side {
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  background-color: #BB000E;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  margin-top: 3.1em;
+}
+
+.nav-side {
+  width: 15%;
+}
+
+.hide-nav-side {
+  width: 5%;
+}
+
+.nav-side ul, .hide-nav-side ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+.arrow {
+  float: right;
+}
+
+#home {
+  margin-left: -5.5em;
+}
+
+#favorite {
+  margin-left: -4.2em;
+}
+
+#watchl {
+  margin-left: -3em;
+}
+
+.nav-side li, .hide-nav-side li {
+  padding: 1.2em;
+}
+
+.activeli {
+  background-color: #F31D27;
+}
+
+.homeli, .favoriteli, .watchli {
+  background-color: #BB000E;
+}
+
+.latest {
+  background-color: #2C2C2C;
+  border: solid 3px #BB000E;
+}
+
+.latest hr {
+  width: 85%;
+  border: 2px solid
+}
