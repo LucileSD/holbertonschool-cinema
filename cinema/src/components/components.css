@@ -1,0 +1,12 @@
+.red {
+  color: #BB000E,
+}
+
+.activity-li {
+  display: flex;
+  align-items: flex-start;
+}
+
+.activity-li {
+  margin-bottom: -3em;
+}

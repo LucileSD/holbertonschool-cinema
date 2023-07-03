@@ -1,6 +1,7 @@
 import './components.css';
 import PropTypes from 'prop-types';
 
+
 export default function Activity(props) {
   const {detailedActivity} = props;
   const options = {
@@ -8,11 +9,12 @@ export default function Activity(props) {
     month: 'long',
     day: 'numeric',
   };
-  const date = (detailedActivity.updatedAt).toLocaleDateString("en-US", options);
+  const newDate = new Date(detailedActivity.updatedAt)
+  const date = newDate.toLocaleDateString("en-US", options);
   return (
     <>
-      <li>
-        <p>{detailedActivity.user.username} added {detailedActivity.title.title} to {detailedActivity.activityType} - {date}</p>
+      <li className='activity-li'>
+        <p className='para'><span className='red'>{detailedActivity.user.username}</span> added<span className='red'>{detailedActivity.title.title}</span> to {detailedActivity.activityType} - {date}</p>
       </li>
     </>
   )

@@ -55,6 +55,12 @@
 .latest {
   background-color: #2C2C2C;
   border: solid 3px #BB000E;
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+.latest::-webkit-scrollbar {
+  display: none;
 }
 
 .latest hr {
