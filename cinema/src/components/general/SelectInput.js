@@ -15,9 +15,9 @@ export default function SelectInput(props) {
     <>
       <label htmlFor={`select-{className}`}>{label}</label>
       <select className={className} multiple={Multiple} id={`select-${className}`} value={selectValue} onChange={(e) => handleSelect(e)}>
-        {options.map((option)=> {
-          <option value={option}>{option}</option>
-        })}
+        {options.map((option)=> (
+          <option key={option} value={option}>{option}</option>
+        ))}
       </select>
     </>
   )

@@ -30,13 +30,13 @@ export default function SideBar() {
     <>
      <nav className={small ? 'hide-nav-side' : 'nav-side'} onMouseEnter={()=> {setShowActivities(true); setSmall(false)}} onMouseLeave={() => {setShowActivities(false); setSmall(true)}}>
         <ul>
-          <li id={small ? 'hide-home' : 'home'} tabindex="1" className={selected === 'home' ? 'activeli' : 'homeli'} onClick={() => setPage('home')}>
+          <li id={small ? 'hide-home' : 'home'} tabIndex="1" className={selected === 'home' ? 'activeli' : 'homeli'} onClick={() => setPage('home')}>
             <FontAwesomeIcon icon={faFolder}/>{!small && ' Home'}{selected === 'home' && !small && <FontAwesomeIcon className='arrow' icon={faArrowRight}/>}
           </li>
-          <li id={small ? 'hide-favorite' : 'favorite'} tabindex="1" className={selected === 'favorites' ? 'activeli' : 'favoriteli'} onClick={() => setPage('favorites')}>
+          <li id={small ? 'hide-favorite' : 'favorite'} tabIndex="1" className={selected === 'favorites' ? 'activeli' : 'favoriteli'} onClick={() => setPage('favorites')}>
             <FontAwesomeIcon icon={faStar}/>{!small && ' Favorites'}{selected === 'favorites' && !small && <FontAwesomeIcon className='arrow' icon={faArrowRight}/>}
           </li>
-          <li id={small ? 'hide-watchl' : 'watchl'} tabindex="1" className={selected === 'watchlater' ? 'activeli' : 'watchli'} onClick={() => setPage('watchlater')}>
+          <li id={small ? 'hide-watchl' : 'watchl'} tabIndex="1" className={selected === 'watchlater' ? 'activeli' : 'watchli'} onClick={() => setPage('watchlater')}>
             <FontAwesomeIcon icon={faClock}/>{!small && ' Watch Later'}{selected === 'watchlater' && !small && <FontAwesomeIcon className='arrow' icon={faArrowRight}/>}
           </li>
         </ul>

@@ -1,0 +1,19 @@
+.filter {
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+}
+
+.multiple-inputs {
+  display: flex;
+  flex-direction: row;
+}
+
+.list-genre {
+  list-style-type: none;
+}
+
+.little-tag {
+  border: #E31C25;
+  border-radius: 50%;
+}

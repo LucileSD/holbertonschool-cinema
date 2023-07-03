@@ -9,19 +9,19 @@ export default function Tag(props) {
 
   const handleTag = () => {
     if (selected) {
-      const selectedGenre = genres.filter((g) => g != genre);
-      setGenres(selectedGenre);
+      const selectedGenre = genres.filter((g) => g !== genre);
+      setGenres(selectedGenre.join(','));
       setSelected(false);
     } else {
       const unselectedGenre = [ ...genres, genre];
-      setGenres(unselectedGenre);
+      setGenres(unselectedGenre.join(','));
       setSelected(true);
     }
   }
 
   return (
     <>
-      <li onClick={() => handleTag()}>{genre}</li>
+      <li className='little-tag' onClick={() => handleTag()}>{genre}</li>
     </>
   )
 }

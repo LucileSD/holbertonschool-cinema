@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../navigation/Header';
 import SideBar from '../../components/navigation/SideBar';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Filter from '../../components/movies/Filter';
 
 export default function Dashboard(props) {
   const { userUsername, setIsLoggedIn} = props;
@@ -11,12 +12,13 @@ export default function Dashboard(props) {
       <div>
         <Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn}></Header>
         <SideBar></SideBar>
+        <Filter />
       </div>
       <Routes>
-        <Route path='/' element={<HomePage />}/>
-        <Route path='/favorites' element={<Favorites/>}/>
-        <Route path='/watchlater' element={<WhatchLater/>}/>
-        <Route path='/*' element={<Navigate to='/'/>}/>
+        <Route path='/' /*element={<HomePage />}*//>
+        <Route path='/favorites' /*element={<Favorites/>}*//>
+        <Route path='/watchlater' /*element={<WhatchLater/>}*//>
+        <Route path='/*' /*element={<Navigate to='/'/>}*//>
       </Routes>
     </BrowserRouter>
   )
