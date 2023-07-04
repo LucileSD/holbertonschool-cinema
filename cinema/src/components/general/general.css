@@ -10,9 +10,7 @@ button:focus {
 }
 
 input {
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
+  border: 0;
   border-bottom: solid 1px #BB000E;
 }
 input:focus {
@@ -31,8 +29,8 @@ input[type = 'text'], input[type = 'password'] {
   display: flex;
   justify-content: flex-start;
   flex-wrap: nowrap;
-  margin-left: 2em;
 }
+
 #icon-label label {
   padding-left: 0.5em;
 }

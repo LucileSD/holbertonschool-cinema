@@ -3,10 +3,8 @@
   flex-direction: column;
   color: #FFFFFF;
   background-color: #BB000E;
-  bottom: 0;
-  top: 0;
-  margin-top: 3.1em;
   position: relative;
+  height: 92vh;
 }
 
 .nav-side {

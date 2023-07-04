@@ -16,6 +16,18 @@ form {
   flex-direction: column;
 }
 
+#login p, #register p {
+  padding-left: 4em;
+}
+
+#login input, #register input {
+  margin-left: 2em;
+}
+
+#login #icon-label, #register #icon-label {
+  margin-left: 2em;
+}
+
 .buttonlogin, .buttonregister {
   width: 10em;
   margin-top: 2em;

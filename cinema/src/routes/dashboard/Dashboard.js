@@ -11,8 +11,10 @@ export default function Dashboard(props) {
     <BrowserRouter>
       <div>
         <Header userUsername={userUsername} setIsLoggedIn={setIsLoggedIn}></Header>
-        <SideBar></SideBar>
-        <Filter />
+        <div className='body-dashboard'>
+          <SideBar></SideBar>
+          <Filter />
+        </div>
       </div>
       <Routes>
         <Route path='/' /*element={<HomePage />}*//>

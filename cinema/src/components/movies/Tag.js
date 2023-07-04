@@ -21,7 +21,7 @@ export default function Tag(props) {
 
   return (
     <>
-      <li className='little-tag' onClick={() => handleTag()}>{genre}</li>
+      <li className={selected ? 'tag-select' : 'tag-unselect'} onClick={handleTag}>{genre}</li>
     </>
   )
 }

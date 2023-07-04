@@ -27,3 +27,8 @@ nav span {
   justify-content: space-between;
   background-color: #161616;
 }
+
+.body-dashboard {
+  display: flex;
+  flex-direction: row;
+}

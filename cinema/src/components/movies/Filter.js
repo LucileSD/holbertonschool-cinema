@@ -16,9 +16,9 @@ export default function Filter(props) {
             <SearchBar title={title} setTitle={setTitle}/>
           </div>
           <div className='multiple-inputs'>
-            <Input label={'Min Date'} type={'number'} className={'minDate'} value={minYear} setValue={setMinYear}/>
-            <Input label={'Max Date'} type={'number'} className={'maxDate'} value={maxYear} setValue={setMaxYear}/>
-            <SelectInput label={'Sort'} options={['latest', 'oldest', 'highestrated', 'lowestrated']} Multiple={false} className={"select-filter"} value={sort} setValue={setSort}/>
+            <Input label={'Min Date:'} type={'number'} className={'minDate'} value={minYear} setValue={setMinYear}/>
+            <Input label={'Max Date:'} type={'number'} className={'maxDate'} value={maxYear} setValue={setMaxYear}/>
+            <SelectInput label={'Sort:'} options={['latest', 'oldest', 'highestrated', 'lowestrated']} Multiple={false} className={"select-filter"} value={sort} setValue={setSort}/>
           </div>
         </div>
         <div className='list-genre'>

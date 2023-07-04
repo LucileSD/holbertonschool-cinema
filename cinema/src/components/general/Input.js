@@ -17,7 +17,7 @@ export default function Input(props) {
       <div id='global-input'>
         <div id='icon-label'>
           { icon && <FontAwesomeIcon className='icon' icon={icon}/>}
-          <label htmlFor={`input-{className}`}>{label}</label>
+          <label htmlFor={`icon-label`}>{label}</label>
         </div>
           <input type={type} className={className} onChange={(e)=> handleInput(e)} value={inputValue} {...inputAttributes} id={`input-${className}`}></input>
       </div>
