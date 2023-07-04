@@ -68,3 +68,75 @@
 .tag-select {
   background-color: #E31C25;
 }
+
+/*movie card*/
+.movie-card {
+  width: 300px;
+  height: 398px;
+  color: #FFFFFF;
+  list-style: none;
+  background-color: #2C2C2C;
+  margin: 2em;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.img-card {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+
+.icon-card {
+  float: right;
+  z-index: 99;
+  position: relative;
+}
+
+.fa-clock, .fa-star {
+  padding: 0.3em;
+}
+
+.fa-clock-select, .fa-star-select {
+  color: transparent;
+}
+
+.movie-card h4, .movie-card p {
+  position: relative;
+}
+
+.movie-card h4 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 64px;
+  font-size: 24px;
+  top: 210px;
+}
+
+.card-synop {
+  margin-top: 18em;
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-genre {
+  border: 1px #E31C25 solid;
+  border-radius: 50px;
+  width: 6em;
+  display: flex;
+  justify-content: center;
+  background-color: #E31C25;
+  justify-content: center;
+  margin: 0.1em;
+}
+
+.all-genre {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
