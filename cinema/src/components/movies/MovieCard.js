@@ -27,7 +27,7 @@ export default function MovieCard(props) {
         }
       })
       .catch((error) => console.log(error.message))
-  })
+  }, [movie])
 
   const handleClick = (type) => {
     const accessToken = localStorage.getItem("accessToken");
@@ -61,7 +61,7 @@ export default function MovieCard(props) {
             <FontAwesomeIcon icon={isWatchLater ? faClock : faRegClock} className='fa-clock' onClick={() => handleClick('watchlater')}/>
             <FontAwesomeIcon icon={isFavorite ? faStar : faRegStar}  className='fa-star' onClick={() => handleClick('favorite')}/>
           </div>
-          <img src={movie.imageurls} className='img-card'></img>
+          <img src={movie.imageurls} className='img-card' alt='movie'></img>
           <h4 key={movie.title} className='card-title'>{movie.title}</h4>
           <p key={movie.id} className='card-synop'>{movie.synopsis}</p>
           <div className='all-genre'>

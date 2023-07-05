@@ -46,7 +46,7 @@ export default function SideBar() {
           <hr></hr>
           <ul>
             {activities.slice(0, 9).map((element) => (
-              <Activity detailedActivity={element}/>
+              <Activity detailedActivity={element} key={element.id}/>
             ))}
           </ul>
         </div>}
