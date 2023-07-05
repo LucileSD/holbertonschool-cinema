@@ -23,7 +23,7 @@ export default function Filter(props) {
         </div>
         <div className='list-genre'>
           {listOfGenre.map((oneGenre) => (
-            <Tag key={oneGenre} genre={oneGenre} filter={false} genres={genres.split(',')} setGenres={setGenres}/>
+            <Tag key={oneGenre} genre={oneGenre} filter={false} genres={genres.replace(/^,/, '').split(',')} setGenres={setGenres}/>
           )
           )}
         </div>

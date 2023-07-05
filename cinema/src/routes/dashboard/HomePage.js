@@ -17,9 +17,9 @@ export default function Homepage() {
   useEffect(() => {
     const loadMovies = (page) => {
       const accessToken = localStorage.getItem("accessToken");
-      axios.get('http://localhost:8000/api/titles/advancedsearch',
-                {headers: { 'Authorization': `Bearer ${accessToken}`}},
-                {params: {minYear: minYear.toString(), maxYear: maxYear.toString(), genres: genres.join(','), title, page, sort}})
+      const headers = { 'Authorization': `Bearer ${accessToken}`};
+      const params = {minYear: minYear.toString(), maxYear: maxYear.toString(), genres: genres.join(','), title, page, sort}
+      axios.get('http://localhost:8000/api/titles/advancedsearch', {headers, params})
             .then((res) => setMovies(res.data.titles))
             .catch((error) => console.log(error.message))
     }
@@ -28,14 +28,16 @@ export default function Homepage() {
 
   return (
     <>
-      <div>
+      <div className='homepage'>
         <Filter minYear={Number.parseInt(minYear)} setMinYear={setMinYear} maxYear={Number.parseInt(maxYear)} setMaxYear={setMaxYear}
         sort={sort} setSort={setSort} genres={genres.join(',')} setGenres={setGenres}
         title={title} setTitle={setTitle}/>
-        {movies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie}/>
-        ))}
-        <Button text='Load More..' className='button-load' onClick={() => setPage(page + 1)} type={'button'}/>
+        <div className='movie-card-home'>
+          {movies.map((movie) => (
+            <MovieCard key={movie.id} movie={movie}/>
+          ))}
+        </div>
+          <Button text='Load More..' className='button-load' onClick={() => setPage(page + 1)} type={'button'}/>
       </div>
     </>
   )

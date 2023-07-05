@@ -13,9 +13,11 @@ export default function Tag(props) {
       setGenres(selectedGenre);
       setSelected(false);
     } else {
-      const unselectedGenre = [ ...genres, genre];
-      setGenres(unselectedGenre);
       setSelected(true);
+      genres.push(genre);
+      if (genres[0] === "") genres.shift();
+      setGenres(genres)
+      
     }
   }
 

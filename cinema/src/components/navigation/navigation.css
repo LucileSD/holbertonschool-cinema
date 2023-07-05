@@ -4,7 +4,7 @@
   color: #FFFFFF;
   background-color: #BB000E;
   position: relative;
-  height: 92vh;
+  min-height: 100vh;
 }
 
 .nav-side {

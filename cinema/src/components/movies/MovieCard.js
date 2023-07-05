@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faRegStar, faClock as faRegClock } from '@fortawesome/free-regular-svg-icons';
 import axios from 'axios';
+import photo from '../../assets/popcorn.png'
 
 export default function MovieCard(props) {
   const {movie} = props;
@@ -53,6 +54,7 @@ export default function MovieCard(props) {
     }
   }
 
+
   return (
     <>
       <div className='movie-card'>
@@ -61,7 +63,7 @@ export default function MovieCard(props) {
             <FontAwesomeIcon icon={isWatchLater ? faClock : faRegClock} className='fa-clock' onClick={() => handleClick('watchlater')}/>
             <FontAwesomeIcon icon={isFavorite ? faStar : faRegStar}  className='fa-star' onClick={() => handleClick('favorite')}/>
           </div>
-          <img src={movie.imageurls} className='img-card' alt='movie'></img>
+          <img src={movie.imageurls} onError={(event) => event.target.src = photo} className='img-card' alt='movie'></img>
           <h4 key={movie.title} className='card-title'>{movie.title}</h4>
           <p key={movie.id} className='card-synop'>{movie.synopsis}</p>
           <div className='all-genre'>

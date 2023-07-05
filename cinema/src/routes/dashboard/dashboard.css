@@ -1,3 +1,4 @@
+/*header*/
 nav img {
   border: solid 3px #BB000E;
   border-radius: 50%;
@@ -28,7 +29,23 @@ nav span {
   background-color: #161616;
 }
 
+/*dashboard*/
 .body-dashboard {
   display: flex;
   flex-direction: row;
+}
+
+/*homepage*/
+.movie-card-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.homepage button {
+  margin-left: 45%;
+}
+
+.homepage {
+  padding-top: 2em;
 }

@@ -2,21 +2,21 @@ import './general.css';
 import PropTypes from 'prop-types';
 
 export default function SearchBar(props) {
-  const { title, setTiltle } = props;
+  const { title, setTitle } = props;
   const handleInput = (event) => {
-    setTiltle(event);
+    setTitle(event.target.value);
   }
   return (
-    <input type='search' placeholder={title} onChange={(e) => handleInput(e)}></input>
+    <input type={'search'} placeholder={"Search Movie ... "} onChange={(e) => handleInput(e)}></input>
   )
 }
 
 SearchBar.propTypes = {
   title: PropTypes.string,
-  setTiltle: PropTypes.func,
+  setTitle: PropTypes.func,
 };
 
 SearchBar.defaultProps = {
   title: '',
-  setTiltle: () => {},
+  setTitle: () => {},
 };

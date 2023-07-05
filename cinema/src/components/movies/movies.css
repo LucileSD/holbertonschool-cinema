@@ -2,6 +2,7 @@
   color: #FFFFFF;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 /*searchbar*/
@@ -77,6 +78,7 @@
   list-style: none;
   background-color: #2C2C2C;
   margin: 2em;
+  box-shadow: 8px 5px 10px #696868;
 }
 
 .movie-card:hover {
@@ -93,6 +95,7 @@
   float: right;
   z-index: 99;
   position: relative;
+  box-shadow: -8px 1px 10px #696868;
 }
 
 .fa-clock, .fa-star {
@@ -122,6 +125,9 @@
   font-size: 12px;
   display: flex;
   flex-wrap: wrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-genre {
