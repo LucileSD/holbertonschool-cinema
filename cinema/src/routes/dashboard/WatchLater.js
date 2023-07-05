@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 import MovieCard from '../../components/movies/MovieCard';
 import axios from 'axios';
 
-export default function Favorites() {
+export default function WatchLater() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
-    axios.get('http://localhost:8000/api/titles/favorite', {headers : { 'Authorization': `Bearer ${accessToken}`}})
+    axios.get('http://localhost:8000/api/titles/watchlater', {headers : { 'Authorization': `Bearer ${accessToken}`}})
       .then((res) => setMovies(res.data))
       .catch((error) => console.log(error))
   })
@@ -16,7 +16,7 @@ export default function Favorites() {
   return (
     <>
       <div>
-        <h1>MOVIES YOU LIKE</h1>
+        <h1>MOOVIES TO WATCH LATER</h1>
         {movies.map((movie) => (
           <MovieCard movie={movie} key={movie.id}/>
         ))}

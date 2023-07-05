@@ -5,6 +5,7 @@ import SideBar from '../../components/navigation/SideBar';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Homepage from './HomePage';
 import Favorites from './Favorites';
+import WatchLater from './WatchLater';
 
 
 export default function Dashboard(props) {
@@ -18,7 +19,7 @@ export default function Dashboard(props) {
           <Routes>
             <Route path='/' element={<Homepage />}/>
             <Route path='/favorites' element={<Favorites/>}/>
-            <Route path='/watchlater' /*element={<WhatchLater/>}*//>
+            <Route path='/watchlater' element={<WatchLater/>}/>
             <Route path='/*' element={<Navigate to='/'/>}/>
           </Routes>
         </div>
