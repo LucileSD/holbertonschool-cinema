@@ -1,3 +1,4 @@
+/*button*/
 button {
   background-color: #BB000E;
   color: #FFFFFF;
@@ -9,6 +10,7 @@ button:focus {
   background-color: #E31C25;
 }
 
+/*input*/
 input {
   border: 0;
   border-bottom: solid 1px #BB000E;
@@ -39,4 +41,21 @@ input[type = 'text'], input[type = 'password'] {
   margin-bottom: 1em;
 }
 
+/*searchbar*/
+.searchbar {
+  display: flex;
+  flex-direction: row;
+  width: 35em;
+  position: relative;
+  left: -0.5em;
+}
 
+.search-input {
+  padding-left: 2em;
+}
+
+.icon-search {
+  padding: 0.8em 0 0 0.3em;
+  position: absolute;
+  opacity: 40%;
+}

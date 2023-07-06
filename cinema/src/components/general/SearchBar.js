@@ -1,5 +1,7 @@
 import './general.css';
 import PropTypes from 'prop-types';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function SearchBar(props) {
   const { title, setTitle } = props;
@@ -7,8 +9,14 @@ export default function SearchBar(props) {
     setTitle(event.target.value);
   }
   return (
-    <input type={'search'} placeholder={"Search Movie ... "} onChange={(e) => handleInput(e)}></input>
-  )
+    <>
+      <div className='searchbar'>
+        <div className='icon-search'>
+          <FontAwesomeIcon icon={faMagnifyingGlass}/>
+        </div>
+        <input type={'search'} className='search-input' placeholder={"Search Movie ... "} onChange={(e) => handleInput(e)}></input>
+      </div>
+    </>  )
 }
 
 SearchBar.propTypes = {
