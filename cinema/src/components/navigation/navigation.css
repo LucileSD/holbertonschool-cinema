@@ -22,17 +22,18 @@
   padding-left: 0;
 }
 
+.hide-nav-side ul {
+  align-items: center;
+}
+
+
+
 .arrow {
   float: right;
 }
 
-
 .nav-side li, .hide-nav-side li {
   padding: 1.2em;
-}
-
-.activeli {
-  background-color: #F31D27;
 }
 
 .homeli, .favoriteli, .watchli {

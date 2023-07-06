@@ -24,7 +24,7 @@ export default function SideBar() {
     axios.get('http://localhost:8000/api/activity', {headers: { 'Authorization': `Bearer ${accessToken}`}})
       .then((res) => setActivities(res.data))
       .catch((error) => console.log(error))
-  }, [])
+  }, [showActivities])
 
   return (
     <>
@@ -33,8 +33,8 @@ export default function SideBar() {
           <li id={small ? 'hide-home' : 'home'} tabIndex="1" className={selected === 'home' ? 'activeli' : 'homeli'} onClick={() => setPage('home')}>
             <FontAwesomeIcon icon={faFolder}/>{!small && ' Home'}{selected === 'home' && !small && <FontAwesomeIcon className='arrow' icon={faArrowRight}/>}
           </li>
-          <li id={small ? 'hide-favorite' : 'favorite'} tabIndex="1" className={selected === 'favorites' ? 'activeli' : 'favoriteli'} onClick={() => setPage('favorites')}>
-            <FontAwesomeIcon icon={faStar}/>{!small && ' Favorites'}{selected === 'favorites' && !small && <FontAwesomeIcon className='arrow' icon={faArrowRight}/>}
+          <li id={small ? 'hide-favorite' : 'favorite-side'} tabIndex="1" className={selected === 'favorites' ? 'activeli' : 'favoriteli'} onClick={() => setPage('favorites')}>
+            <FontAwesomeIcon icon={faStar} className='icon-side-fav'/>{!small && ' Favorites'}{selected === 'favorites' && !small && <FontAwesomeIcon className='arrow' icon={faArrowRight}/>}
           </li>
           <li id={small ? 'hide-watchl' : 'watchl'} tabIndex="1" className={selected === 'watchlater' ? 'activeli' : 'watchli'} onClick={() => setPage('watchlater')}>
             <FontAwesomeIcon icon={faClock}/>{!small && ' Watch Later'}{selected === 'watchlater' && !small && <FontAwesomeIcon className='arrow' icon={faArrowRight}/>}

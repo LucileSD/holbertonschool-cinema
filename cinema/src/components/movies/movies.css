@@ -95,7 +95,7 @@
   float: right;
   z-index: 99;
   position: relative;
-  box-shadow: -8px 1px 10px #696868;
+  background: linear-gradient(90deg, rgba(197, 196, 196, 0), rgba(0, 0, 0, 0.4));
 }
 
 .fa-clock, .fa-star {
