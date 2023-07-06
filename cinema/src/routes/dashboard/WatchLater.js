@@ -15,11 +15,13 @@ export default function WatchLater() {
 
   return (
     <>
-      <div>
-        <h1>MOOVIES TO WATCH LATER</h1>
-        {movies.map((movie) => (
-          <MovieCard movie={movie} key={movie.id}/>
-        ))}
+      <div className='watchlater'>
+        <h1 className='watchlater-title'>MOOVIES TO WATCH LATER</h1>
+        <div className='watchlater-card'>
+          {movies.map((movie) => (
+            <MovieCard movie={movie} key={movie.id}/>
+          ))}
+        </div>
       </div>
     </>
   )

@@ -49,3 +49,49 @@ nav span {
 .homepage {
   padding-top: 2em;
 }
+
+/*favorite*/
+.favorite {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.favorite-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.favorite-title {
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+  border-bottom: 3px solid #E31C25;
+  width: 8.5em;
+  margin-left: 35%;
+  font-size: 63px;
+}
+
+/*watch later*/
+.watchlater {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.watchlater-card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.watchlater-title {
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+  border-bottom: 3px solid #E31C25;
+  width: 13em;
+  margin-left: 24%;
+  font-size: 63px;
+}

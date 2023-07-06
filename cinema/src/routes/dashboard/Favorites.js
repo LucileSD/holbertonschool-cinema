@@ -15,11 +15,13 @@ export default function Favorites() {
 
   return (
     <>
-      <div>
-        <h1>MOVIES YOU LIKE</h1>
-        {movies.map((movie) => (
-          <MovieCard movie={movie} key={movie.id}/>
-        ))}
+      <div className='favorite'>
+        <h1 className='favorite-title'>MOVIES YOU LIKE</h1>
+        <div className='favorite-card'>
+          {movies.map((movie) => (
+            <MovieCard movie={movie} key={movie.id}/>
+          ))}
+        </div>
       </div>
     </>
   )
