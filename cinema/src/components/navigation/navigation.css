@@ -26,14 +26,17 @@
   align-items: center;
 }
 
-
-
 .arrow {
   float: right;
 }
 
 .nav-side li, .hide-nav-side li {
   padding: 1.2em;
+}
+
+.activeli {
+  background-color: #F31D27;
+
 }
 
 .homeli, .favoriteli, .watchli {
@@ -58,4 +61,8 @@
 
 .latest h3 {
   margin-left: 1em;
+}
+
+#hide-home, #hide-favorite, #hide-watchl {
+  height: 100%;
 }

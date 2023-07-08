@@ -37,7 +37,9 @@ export default function Homepage() {
             <MovieCard key={movie.id} movie={movie}/>
           ))}
         </div>
+        <div className='button-homepage-div'>
           <Button text='Load More..' className='button-load' onClick={() => setPage(page + 1)} type={'button'}/>
+        </div>
       </div>
     </>
   )

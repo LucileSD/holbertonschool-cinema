@@ -42,12 +42,15 @@ nav span {
   justify-content: center;
 }
 
-.homepage button {
-  margin-left: 45%;
+.button-homepage-div {
+  width: 93vw;
+  display: flex;
+  justify-content: center;
 }
 
 .homepage {
   padding-top: 2em;
+  width: 100vw;
 }
 
 /*favorite*/
@@ -63,13 +66,15 @@ nav span {
   flex-wrap: wrap;
 }
 
-.favorite-title {
+.embrace-title-favorite {
+  width: 90vw;
   display: flex;
   justify-content: center;
+}
+
+.favorite-title {
   color: #FFFFFF;
   border-bottom: 3px solid #E31C25;
-  width: 8.5em;
-  margin-left: 35%;
   font-size: 63px;
 }
 
@@ -86,12 +91,14 @@ nav span {
   flex-wrap: wrap;
 }
 
-.watchlater-title {
+.embrace-title-watch {
+  width: 90vw;
   display: flex;
   justify-content: center;
+}
+
+.watchlater-title {
   color: #FFFFFF;
   border-bottom: 3px solid #E31C25;
-  width: 13em;
-  margin-left: 24%;
   font-size: 63px;
 }

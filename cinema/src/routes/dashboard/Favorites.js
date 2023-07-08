@@ -11,12 +11,14 @@ export default function Favorites() {
     axios.get('http://localhost:8000/api/titles/favorite', {headers : { 'Authorization': `Bearer ${accessToken}`}})
       .then((res) => setMovies(res.data))
       .catch((error) => console.log(error))
-  })
+  }, [movies])
 
   return (
     <>
       <div className='favorite'>
-        <h1 className='favorite-title'>MOVIES YOU LIKE</h1>
+        <div className='embrace-title-favorite'>
+          <h1 className='favorite-title'>MOVIES YOU LIKE</h1>
+        </div>
         <div className='favorite-card'>
           {movies.map((movie) => (
             <MovieCard movie={movie} key={movie.id}/>

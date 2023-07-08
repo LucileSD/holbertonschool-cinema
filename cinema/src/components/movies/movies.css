@@ -98,7 +98,7 @@
   background: linear-gradient(90deg, rgba(197, 196, 196, 0), rgba(0, 0, 0, 0.4));
 }
 
-.fa-clock, .fa-star {
+.icon-card .fa-clock, .icon-card .fa-star {
   padding: 0.3em;
 }
 
